@@ -6,6 +6,7 @@
     <title>Гостиницы</title>
   </head>
   <body>
+    <div class="container">
     <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html"><img class="logo" src="icons\logo-sedona.svg"   width="139" height="70" alt="Логотип туристического городка Седона"></img></a>
@@ -35,9 +36,11 @@
         </nav>
       </header>
       <main class="main-inner">
+        <div class="main-container">
         <div class="filter-container">
         <header class="inner-header">
           <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <div class="breadcrumbs-container">
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -46,12 +49,14 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
+        </div>
         </header>
           <!-- Фильтр -->
         <section class="catalog-products">
-          <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+          
+          <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            
+              <div class="filter-content-container">
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура</legend>
                   <ul class="catalog-filter-list">
@@ -89,11 +94,14 @@
                     </li>
                   </ul>
                 </fieldset>
+                <div class="button-container-apply-drop">
                 <input class="button button-apply" type="submit" value="Применить">
                 <input class="button button-drop" type="reset" value="Сбросить">
-                
+              </div>
+              </div>
               
             </form>
+          
           </div>
             <!--   label><h2>Найдено гостиниц:</h2>
               <output></output>
@@ -101,6 +109,7 @@
 
             <!-- Сортировка -->
             <div class="sort-and-catalog-container">
+              <div class="sort-container">
             <select class="select-control" aria-label="Сортировка">
               <option value="popular">Сначала популярные</option>
               <option value="cheap">Сначала дешёвые</option>
@@ -115,6 +124,7 @@
             <a class="button" href="#">
               <span class="visually-hidden">Показать список</span>
             </a>
+          </div>
             <!-- Список гостиниц -->
             <ul class="product-list">
             <li class="product-card">
@@ -124,7 +134,7 @@
               </a>
               <a class="button button-about" href="#">Подробнее</a>
               <a class="button button-like" href="#">В избранное</a>
-              <input class="reiting" type="button" value="Рейтинг: 8,5">
+              <button class="rating" type="none">Рейтинг: 8,5</button>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
@@ -133,7 +143,7 @@
               </a>
               <a class="button button-about" href="#">Подробнее</a>
               <a class="button button-like" href="#">В избранное</a>
-              <input class="reiting" type="button" value="Рейтинг: 9,2">
+              <button class="rating" type="none">Рейтинг: 9,2</button>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
@@ -142,7 +152,7 @@
               </a>
               <a class="button button-about" href="#">Подробнее</a>
               <a class="button button-like" href="#">В избранное</a>
-              <input class="reiting" type="button" value="Рейтинг: 6,9">
+              <button class="rating" type="none">Рейтинг: 6,9</button>
             </li>
             <li class="product-card">
               <a class="product-card-link" href=#">
@@ -151,7 +161,7 @@
               </a>
               <a class="button button-about" href="#">Подробнее</a>
               <a class="button button-like" href="#">В избранное</a>
-              <input class="reiting" type="button" value="Рейтинг: 5,0">
+              <button class="rating" type="none">Рейтинг: 5,0</button>
             </li>
           </ul>
         
@@ -194,7 +204,7 @@
           <input type="submit" value="Подписаться" class="button button-subcribe">
           </form>
         </section>
-
+      </div>
       </main>
 
 
@@ -202,6 +212,7 @@
 
       
       <footer class="page-footer">
+        <div class="page-footer-container">
         <section class="social">
           <ul class="social-list">
             <li>
@@ -231,7 +242,8 @@
         <section class="logo-footer-academy">
           <a class="logo-link" href="https://htmlacademy.ru"><img class="logo-academy" src="icons/HTML-Academy.svg" width="115" height="33" alt="Логотип html Academy"></a>
         </section>
-  
+      </div>
       </footer>
+    </div>
   </body>
 </html>
