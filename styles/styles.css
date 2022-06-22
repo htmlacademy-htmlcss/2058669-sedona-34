@@ -67,17 +67,16 @@ body {
   width: 110px;
   border-radius: 4px;
   padding: 9px 15px;
-  margin-left: auto;
-  margin-bottom: 16px;
+  grid-row: 4/5;
+  grid-column: 2/3;
 }
 .button-like {
   width: 110px;
   border-radius: 4px;
   background: #82B3D3;
   padding: 9px 15px;
-  margin-left: auto;
-  margin-right: 20px;
-  margin-bottom: 16px;
+  grid-row: 4/5;
+  grid-column: 4/5;
 }
 .button-rating {
   width: 140px;
@@ -85,8 +84,8 @@ body {
   border-radius: 4px;
   border: none;
   padding: 9px 32px;
-  margin-left: auto;
-  margin-right: 20px;  
+  grid-row: 5/6;
+  grid-column: 4/5;
 }
 .button-search {
   padding: 20px 0;
@@ -164,10 +163,8 @@ body {
   min-height: 22px;
 }
 .navigation-logo {
-  margin-left: 70px;
-  margin-right: 30px;
-  margin-bottom: auto;
-  margin-top: 0;
+  margin: 0 30px auto 70px;
+  height: 70px;
 }
 /*Главная страница*/
 .container {
@@ -228,7 +225,22 @@ body {
   line-height: 26px;
   color: #333333;
 }
-/*Главная страница - Преимущества*/
+/*Главная страница - Преимущества - На гридах*/
+.advantages-list-grid {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.advantages-item.advantages-photo-1 {
+  grid-column: 2/4;
+}
+.advantages-item.advantages-photo-2{
+  grid-column: 1/3;
+}
+/*Главная страница - Преимущества - На флексах*/
 .advantages-list {
   margin: 0;
   padding: 0;
@@ -239,11 +251,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+/*Главная страница - Преимущества - общие стили */
 .advantages-item {
   width: 400px;
-  height: 384px;
+  min-height: 384px;
 }
 .advantages-item.advantages-photo-1, .advantages-item.advantages-photo-2 {
+  height: 384px;
   width: 800px;
 }
 .advantages-title {
@@ -506,27 +520,26 @@ ul.catalog-filter-list {
 }
 /*Каталог - Продукты(Гостиницы)*/
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 18px;
   padding: 0;
-  margin: 0 0 95px;
+  margin: 0 0 66px;
 }
 .product-card {
-  display: flex;
-  flex-direction: column;
-  width: 340px;
-  margin-bottom: 20px;
-}
-.product-card:not(:nth-child(3n)){
-  margin-right: 19px;
+  display: grid;
+  grid-template-columns: 20px 140px 20px 140px 20px;
+  grid-template-rows: 231px min-content min-content auto auto;
+  row-gap: 16px;
 }
 .product-card-image {
-  padding-left: 20px;
-  padding-right:20px;
   padding-top: 20px;
+  object-fit: contain;
+  max-width: 100%;
 }
 .product-card-link {
   text-decoration: none;
+  grid-column: 2/5;
 }
 .product-card-title {
   font-size: 24px;
@@ -534,7 +547,31 @@ ul.catalog-filter-list {
   line-height: 28px;
   text-align: left;
   color: #000000;
-  margin-left: 20px;
+  text-decoration: none;
+  grid-column: 2/5;
+  grid-row: 2/3;
+}
+.product-card-title h3{
+  margin: 0;
+}
+.housing-name, .housing-price {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #333333;
+}
+.housing-name {
+  grid-column: 2/3;
+}
+.housing-price {
+  grid-column: 4/5;
+}
+.stars {
+  margin: 0;
+  padding: 0;
+  grid-row: 5/6;
+  grid-column: 2/3;
 }
 /*Каталог - Пагинация*/
 .pagination-link {
