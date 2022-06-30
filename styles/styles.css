@@ -674,6 +674,13 @@ ul.catalog-filter-list {
   margin: 0 auto;
   width: 1060px;
 }
+.control-input:hover {
+  opacity: 0.6;
+}
+.control-input:focus {
+  opacity: 0.6;
+  border: 2px solid #68A2CA;
+}
  /*Каталог - Хлебные крошки*/
  .breadcrumbs-container {
   display: flex;
@@ -681,6 +688,7 @@ ul.catalog-filter-list {
   flex-direction: row;
 }
 .breadcrumbs {
+  position: relative;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -690,11 +698,29 @@ ul.catalog-filter-list {
   padding: 0;
 }
 .breadcrumbs-item:not(:first-child) {
+  margin-left: 25px;
+}
+.breadcrumbs-item:not(:last-child)::after {
+  border: solid #ffffff;
+  border-width: 0 1px 1px 0;
+  position: absolute;
+  bottom: 6px;
+  padding: 3px;
+  transform: rotate(-45deg);
+  content: "";
   margin-left: 10px;
+  margin-right: 10px;
 }
 .breadcrumbs-link {
   text-decoration: none;
   color:#ffffff;
+  cursor: pointer;
+}
+.breadcrumbs-item:hover {
+  opacity: 0.6;
+}
+.breadcrumbs-item:focus {
+  opacity: 0.6;
 }
 /*Каталог - Продукты(Гостиницы)*/
 .product-list {
