@@ -125,7 +125,7 @@
       <section class="search-hostel">
         <h2 class="search-hostel-title">Заинтересовались?</h1>
         <p class="search-hostel-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="button button-search" href="#">Поиск гостиницы в Седоне</a>
+        <button class="button button-search" type="button" onclick="document.querySelector('.modal-container').classList.remove('modal-close-container')">Поиск гостиницы в Седоне</button>
       </section>
 
       <section class="subscribe">
@@ -185,6 +185,61 @@
       </section>
     </div>
     </footer>
+  </div>
+  <div class="modal-container modal-close-container">
+    <div class="modal modal-search">
+      <button class="modal-close-button" onclick="document.querySelector('.modal-container').classList.add('modal-close-container')">
+        <span class="visually-hidden">Закрыть</span>
+        <svg class="modal-close-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z"></path>
+          </svg>
+          
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+          
+            <label class="field-group-label check-in" for="auth-check-in">
+            <span class="check-in-date">Дата Заезда:</span> 
+            <input class="modal-field-date check-in-input" type="text" id="auth-check-in" name="auth-check-in" placeholder="27 апреля 2020">
+            <div class="check-in-icon"></div>
+            </label>
+            <div class="check-in-error">Мы не можем отправить вас в прошлое.</div>
+          
+            <label class="field-group-label check-out" for="auth-check-out">
+            <span class="check-out-date">Дата Выезда:</span>
+            <input class="modal-field-date check-out-input" type="text" id="auth-check-out" name="auth-check-out" placeholder="1 сентября 2021">
+            <div class="check-out-icon"></div>  
+            </label>
+            <div class="check-out-error">На эти даты есть свободные номера. Пока есть.</div>
+            
+          <div class="field-group-visiters">
+
+            <label class="field-group-label adults" for="auth-adults">
+              <span class="adults-visiters">Взрослые:</span>
+              <div class="modal-buttons-container">
+                <button class="modal-button-min" type="button"></button>
+                <input class="modal-field-visiters adults-input" type="text" id="auth-adults" name="auth-adultst" placeholder="2">
+                <button class="modal-button-plus" type="button"></button>
+              </div>
+            </label>
+            <label class="field-group-label childrens" for="auth-childrens">
+              <span class="childrens-visiters">Дети:</span>
+              <div class="iformation-childrens-icon"></div>
+              <div class="tooltip-childrens-container">
+                Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+              </div>
+              <div class="modal-buttons-container">
+                <button class="modal-button-min" type="button"></button>
+                <input class="modal-field-visiters childrens-input" type="text" id="auth-childrens" name="auth-childrens" placeholder="1">
+                <button class="modal-button-plus" type="button"></button>
+              </div>
+            </label>
+          </div>
+          <button class="button modal-search-form-button" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
   </div>
   </body>
 
