@@ -207,32 +207,32 @@
             <div class="check-in-error">Мы не можем отправить вас в прошлое.</div>
           
             <label class="field-group-label check-out" for="auth-check-out">
-            <span class="check-out-date">Дата Выезда:</span>
+            <p class="check-out-date">Дата Выезда:</p>
             <input class="modal-field-date check-out-input" type="text" id="auth-check-out" name="auth-check-out" placeholder="1 сентября 2021">
             <span class="check-out-icon"></span>  
             </label>
-            <div class="check-out-error">На эти даты есть свободные номера. Пока есть.</div>
+            <p class="check-out-error">На эти даты есть свободные номера. Пока есть.</p>
             
           <div class="field-group-visiters">
 
             <label class="field-group-label adults" for="auth-adults">
-              <span class="adults-visiters">Взрослые:</span>
+              <p class="adults-visiters">Взрослые:</p>
               <span class="modal-buttons-container">
-                <button class="modal-button-min" type="button"></button>
+                <!-- <button class="modal-button-min" type="button"></button> ошибка валидации-->
                 <input class="modal-field-visiters adults-input" id="auth-adults" type="text" name="auth-adults" placeholder="2">
-                <button class="modal-button-plus" type="button"></button>
+                <!-- <button class="modal-button-plus" type="button"></button>  ошибка валидации-->
               </span>
             </label>
             <label class="field-group-label childrens" for="auth-childrens">
-              <span class="childrens-visiters">Дети:</span>
+              <p class="childrens-visiters">Дети:</p>
               <span class="iformation-childrens-icon"></span>
-              <span class="tooltip-childrens-container">
+              <p class="tooltip-childrens-container">
                 Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
-              </span>
+              </p>
               <span class="modal-buttons-container">
-                <button class="modal-button-min" type="button"></button>
+                <!-- <button class="modal-button-min" type="button"></button> ошибка валидации-->
                 <input class="modal-field-visiters childrens-input" type="text" id="auth-childrens" name="auth-childrens" placeholder="1">
-                <button class="modal-button-plus" type="button"></button>
+                <!-- <button class="modal-button-plus" type="button"></button> ошибка валидации-->
               </span>
             </label>
           </div>
