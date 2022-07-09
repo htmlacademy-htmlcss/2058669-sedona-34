@@ -1179,7 +1179,7 @@ ul.catalog-filter-list {
 .select-hoslets-in-page:active {
   border-color: #3F5E72;
 }
-label {
+.select-hoslets-in-page-label {
   margin-left: auto;
   margin-right: 0;
 }
@@ -1206,7 +1206,7 @@ label {
   width: 715px;
 }
 .modal-title {
-font-family: 'PT Sans';
+font-family: 'PT Sans', sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 30px;
